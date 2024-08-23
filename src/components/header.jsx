@@ -1,12 +1,13 @@
 import React from "react";
+import '../styles/components/header.css';
 
 const Header = () => {
     return(
         <>
         <div className="header">
-            <div className="container">
+            <div className="header-container">
                 <div className="logo">
-
+                    <img src="/images/logo.svg" alt="logo" />
                 </div>
                 <div className="navbar">
                     <ul>
@@ -17,8 +18,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="login-signup">
-                    <a href="#">Login</a>
-                    <a href="#">Signup</a>
+                    <a href="#" className="button login">Login</a>
+                    <a href="#" className="button signup">Sign Up</a>
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import '../styles/main.css';
+import '../styles/home/home.css';
 
 const Homepage = () => {
     return(
@@ -15,13 +17,16 @@ const Homepage = () => {
                             <h1>Studying Online is now much easier</h1>
                             <p>TOTC is an interesting platform that will teach you in more an interactive way</p>
                             <div className="buttons">
-                                <button>Join for free</button>
-                                <button>Watch how it works</button>
+                                <button className="join">Join for free</button>
+                                {/* <button className="watch">Watch how it works</button> */}
                             </div>
                             </div>
                             <div className="image-container">
-
+                                <img src="/images/hero-image.png" alt="hero image" />
                             </div>
+                            
+                        </div>
+                        <div className="curve">
                             
                         </div>
                     </div>

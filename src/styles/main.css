@@ -12,4 +12,25 @@ html {
 body {
   font-family: "Lexend", sans-serif;
   font-size: 16px;
+}
+
+.container {
+  padding-inline: 80px;
+  padding-block: 50px;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+button {
+  padding: 16px 24px;
+  font-family: "Lexend", sans-serif;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
