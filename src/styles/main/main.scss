@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+$primary_color: #145c74;
+$primary_grey: #575758;
+$secondary_color: #f8f7f7;
+$sec_grey: #6e6e6e;
+$white: #ffffff;
+$black: #000000;
+$font: "Lexend", sans-serif;
+$primary_gap: 1.5rem;
+$sec_gap: 0.75rem;
+
+$button-border-radius: 5rem;
+$button-padding: 1rem 4rem;
+$button-height: 3.75rem;
+$marginSection: 5rem 0rem 0rem 0rem;
+$marginTexts: 1.25rem 0rem 1.0625rem 0rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9375rem 1.875rem;
+  background-color: $primary_color;
+
+  .navList {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: $primary_gap;
+    li {
+      margin-right: 1.25rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      .link {
+        color: $white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: $font;
+        font-weight: 600;
+        line-height: 1.575rem;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        img {
+          max-width: 1.25rem;
+          margin-right: 0.3125rem;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        .link {
+          color: #fff;
+          margin-right: 0.3125rem;
+          text-decoration: none;
+          font-family: $font;
+        }
+      }
+    }
+  }
+
+  .nav-components {
+    justify-content: flex-end;
+    display: flex;
+    gap: $primary_gap;
+    align-items: center;
+  }
+}
+
+.logo {
+  display: block;
+  img {
+    width: 9.5rem;
+    height: 5.1875rem;
+  }
+}
+
+
+
+
+.theButton {
+  font-weight: 500;
+  line-height: 1.5rem;
+  border: none;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+  font-size: 1rem;
+  font-family: $font;
+  height: 3.75rem;
+  cursor: pointer;
+}
+.signup {
+  border: 0.125rem solid $white;
+  color: $white;
+  background-color: $primary_color;
+}
+.login {
+  background-color: $white;
+  color: $primary_color;
+}
+.divider {
+    height: 100%;
+    width: 0.125rem; 
+    background-color: white; 
+    padding: 1.25rem 0; 
+}
+
+
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1.875rem;
+  background-color: $primary_color;
+  flex-direction: column;
+  .footer_container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $primary_gap;
+  }
+  .footer_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: bold;
+    font-family: $font;
+  }
+  .footer_title {
+    font-size: 1.375rem;
+    font-family: $font;
+    color: #ffffff;
+  }
+  .footer_subscribe {
+    padding: 1.25rem 0;
+    text-align: center;
+    p {
+      padding-bottom: 1.625rem;
+      font-size: 1.125rem;
+      font-family: $font;
+      text-align: center;
+      color: $white;
+    }
+    .footer_form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.625rem;
+      .signup{
+        outline: none;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .footer_links {
+    display: flex;
+    gap: 0.9375rem;
+    padding: 1.25rem 0;
+    text-align: center;
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: $font;
+      line-height: 2.1875rem;
+      text-align: center;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer_copyright {
+    padding-top: 1.25rem;
+    font-size: 0.875rem;
+    font-family: $font;
+    color: $white;
+  }
+}
+
+
+
