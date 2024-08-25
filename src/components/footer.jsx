@@ -21,9 +21,9 @@ const Footer = () => {
                         <input
                             type="email"
                             placeholder="Your Email"
-                            className="theButton signup"
+                            className="bttn signup"
                         />
-                        <button type="submit" className="theButton signup">
+                        <button type="submit" className="bttn signup">
                             Subscribe
                         </button>
                     </form>

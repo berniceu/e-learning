@@ -12,8 +12,7 @@ $sec_gap: 0.75rem;
 $button-border-radius: 5rem;
 $button-padding: 1rem 4rem;
 $button-height: 3.75rem;
-$marginSection: 5rem 0rem 0rem 0rem;
-$marginTexts: 1.25rem 0rem 1.0625rem 0rem;
+
 
 * {
   margin: 0;
@@ -86,7 +85,7 @@ $marginTexts: 1.25rem 0rem 1.0625rem 0rem;
 
 
 
-.theButton {
+.bttn {
   font-weight: 500;
   line-height: 1.5rem;
   border: none;

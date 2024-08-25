@@ -21,8 +21,8 @@ const Header = () => {
                     <li>  <NavLink to="/courses" end className="link" >Courses</NavLink> </li>
                 </ul>
                 <ul class="navList">
-                    <button class="theButton login">Log in</button>
-                    <button class="theButton signup">Sign up</button>
+                    <button class="bttn login">Log in</button>
+                    <button class="bttn signup">Sign up</button>
                 </ul>
             </div>
         </nav>
