@@ -1,0 +1,84 @@
+.lesson-list {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.lesson-list h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+.lesson-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.lesson-list ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.lesson-list ul li.completed .completed-indicator {
+  color: green;
+}
+.lesson-list ul li:last-child {
+  border-bottom: none;
+}
+.lesson-list ul li .lesson-info {
+  display: flex;
+  align-items: center;
+}
+.lesson-list ul li .lesson-info .lesson-thumbnail {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+.lesson-list ul li .lesson-info .lesson-thumbnail img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.lesson-list ul li .lesson-info .lesson-details h3 {
+  margin: 0;
+  color: #333;
+}
+.lesson-list ul li .lesson-info .lesson-details p {
+  margin: 5px 0 0;
+  color: #777;
+}
+.lesson-list ul li .lesson-resources {
+  flex: 1;
+  padding-left: 20px;
+}
+.lesson-list ul li .lesson-resources p {
+  margin: 0;
+  color: #333;
+}
+.lesson-list ul li .lesson-status {
+  font-size: 1.5em;
+}
+.lesson-list ul li .lesson-status .completed-indicator {
+  color: green;
+}
+.lesson-list ul li .lesson-status .pending-indicator {
+  color: #888;
+}
+.lesson-list .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.lesson-list .pagination button {
+  background-color: #f0f0f0;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+}
+.lesson-list .pagination button:hover {
+  background-color: #e0e0e0;
+}/*# sourceMappingURL=LessonList.css.map */

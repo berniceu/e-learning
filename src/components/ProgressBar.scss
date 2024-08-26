@@ -1,0 +1,50 @@
+.progress-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #fff;
+
+    .progress-bar {
+        width: 70%;
+
+        h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 10px;
+            margin-bottom: 10px;
+
+            .filled-bar {
+                background-color: #006d77;
+                height: 100%;
+                border-radius: 5px;
+            }
+        }
+
+        p {
+            margin: 0;
+            color: #333;
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .course-status {
+        text-align: right;
+
+        p {
+            margin: 5px 0;
+            color: #555;
+            strong {
+                font-size: 1.2em;
+                color: #333;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+.course-header .course-title h1 {
+  font-size: 24px;
+  color: #333;
+}
+.course-header .edit-button {
+  background-color: #006d77;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}/*# sourceMappingURL=CourseHeader.css.map */

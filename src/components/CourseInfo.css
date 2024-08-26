@@ -1,0 +1,18 @@
+.course-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.course-info .about-course {
+  width: 60%;
+}
+.course-info .facts-skills {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+.course-info .facts-skills .facts ul, .course-info .facts-skills .skills ul {
+  list-style: none;
+  padding: 0;
+}/*# sourceMappingURL=CourseInfo.css.map */

@@ -1,0 +1,20 @@
+.session-list {
+    background-color: #fff;
+    padding: 20px;
+
+    .session {
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #e0f7fa;
+        border-radius: 5px;
+
+        h3 {
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+            color: #555;
+        }
+    }
+}

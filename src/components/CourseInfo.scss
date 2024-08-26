@@ -1,0 +1,23 @@
+.course-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+
+    .about-course {
+        width: 60%;
+    }
+
+    .facts-skills {
+        display: flex;
+        justify-content: space-between;
+        width: 35%;
+
+        .facts, .skills {
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+        }
+    }
+}

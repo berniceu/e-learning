@@ -1,18 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Homepage from './pages/Homepage';
+import React from 'react';
+import './App.scss';
+import CourseHeader from './components/CourseHeader';
+import CourseInfo from './components/CourseInfo';
+import SessionList from './components/SessionList';
+import ProgressBar from './components/ProgressBar';
+import LessonList from './components/LessonList';
 
 function App() {
   return (
-    <>
-
-      <Router>
-        <Routes>
-          <Route exact path="/" element={<Homepage />} />
-        </Routes>
-      </Router>
-    
-    </>
+    <div className="app">
+      <CourseHeader />
+      <CourseInfo />
+      <SessionList />
+      <ProgressBar />
+      <LessonList />
+    </div>
   );
 }
 
 export default App;
+

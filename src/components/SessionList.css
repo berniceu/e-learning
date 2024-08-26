@@ -1,0 +1,17 @@
+.session-list {
+  background-color: #fff;
+  padding: 20px;
+}
+.session-list .session {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #e0f7fa;
+  border-radius: 5px;
+}
+.session-list .session h3 {
+  margin: 0;
+}
+.session-list .session p {
+  margin: 5px 0;
+  color: #555;
+}/*# sourceMappingURL=SessionList.css.map */
