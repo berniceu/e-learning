@@ -44,44 +44,126 @@ button{
 
                     .image-container{
                         max-width: 600px;
+                        width: 100%;
 
-                        img{
-                            width: 100%;
-                            height: auto;
-                        }
+
                     }
                 }
 
-                .curve{
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 10vh;
-                    background-color: $primary-color;
-                    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-                    transform: scaleX(1.5);
-                }
+            }
+
+            .hero-section::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 10vh;
+                background-color: $primary-color;
+                border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+                transform: scaleX(1.5);
             }
 
             .success-section{
                 .container{
-                    .description, .software{
-                        text-align: center;
+                    .numbers{
                         display: flex;
-                        flex-direction: column;
-                        gap: 20px;
+                        justify-content: space-around;
                     }
+
+                    .student-count{
+                        display: flex;
+                        align-items: center;
+  flex-direction: column;
+
+  h2 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18px;
+    color: #666;
+    margin: 5px 0 0;
+  }
+                    }
+
+                    
                 }
             }
 
             .about-us-section{
+                font-family: $secondary-font-family;
+
+                p{
+                    color: #696984;
+                }
                 .container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .cards{
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 30px;
+                        padding-bottom: 50px;
+                        .success-card{
+                            background-color: #fff;
+                            padding: 20px;
+                            border-radius: 8px;
+                            text-align: center;
+                            max-width: 300px;
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+                            .icon-wrapper {
+                                width: 80px;
+                                height: 80px;
+                                margin: 0 auto 20px;
+                                background-color: #fff;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                              }
+                          
+                            .icon-container {
+                                width: 60px;
+                                height: 60px;
+                                background-color: #000;
+                                border-radius: 50%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                              
+                          
+                              img {
+                                width: 30px;
+                                height: 30px;
+                              }
+                            }
+                          
+                            h3 {
+                              font-size: 18px;
+                              margin-bottom: 10px;
+                            }
+                          
+                            p {
+                              font-size: 14px;
+                              line-height: 1.4;
+                            }
+                          }
+                    }
                     .description{
                         text-align: center;
                         display: flex;
                         flex-direction: column;
                         gap: 20px;
+                        max-width: 700px;
+                        padding-bottom: 50px;
                     }
 
                     .more-info{
@@ -92,6 +174,32 @@ button{
                         a{
                             color: #696984;
                             text-decoration: underline;
+                        }
+
+                        .text-container{
+                            max-width: 550px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 24px;
+                        }
+
+                        .image-container{
+                            width: 400px;
+                            min-height: 250px;
+                            background-image: url('/public/images/class.png');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: cover;
+                            position: relative;
+
+                            img{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                max-width: 100%;
+                                height: auto;
+                            }
                         }
                     }
                 }
@@ -112,6 +220,10 @@ button{
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+
+                        h4{
+                            font-size: 24px;
+                        }
         
                         a{
                             color: #696984;
@@ -120,6 +232,82 @@ button{
                     }
                 }
             }
+
+            .courses-section {
+                padding: 2rem 0;
+                font-family: $secondary-font-family;
+              
+                .container {
+                  max-width: 1200px;
+                  margin: 0 auto;
+                  padding: 0 1rem;
+                  display: flex;
+                  gap: 2rem;
+                }
+              
+                .courses {
+                  flex: 1;
+                  background-image: url('/public/images/class.png'); 
+                  background-size: cover;
+                  background-position: center;
+                  min-height: 300px;
+                  border-radius: 10px;
+                  position: relative;
+                  overflow: hidden;
+              
+                  .explore-overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+              
+                    h2 {
+                      font-size: 2.5rem;
+                      margin-bottom: 1rem;
+                    }
+              
+                    .view-courses-btn {
+                      background: black;
+                      color: white;
+                      border: none;
+                      padding: 0.75rem 1.5rem;
+                      border-radius: 25px;
+                      font-size: 1rem;
+                      cursor: pointer;
+                      border: 1px solid #fff;
+              
+                      &:hover {
+                        background: #333;
+                      }
+                    }
+                  }
+                }
+              
+                .description {
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+              
+                  h3 {
+                    font-size: 1.75rem;
+                    margin-bottom: 1rem;
+                    color: #333;
+                  }
+              
+                  p {
+                    font-size: 1rem;
+                    color: #666;
+                  }
+                }
+              }
             
         }
     }

@@ -3,6 +3,8 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import '../styles/main.css';
 import '../styles/home/home.css';
+import SuccessCard from "../components/successCard";
+import StudentCount from "../components/studentCount";
 
 const Homepage = () => {
     return(
@@ -22,7 +24,7 @@ const Homepage = () => {
                             </div>
                             </div>
                             <div className="image-container">
-                                <img src="/images/hero-image.png" alt="hero image" />
+                                <img src="/images/class.png" alt="hero image" />
                             </div>
                             
                         </div>
@@ -32,58 +34,60 @@ const Homepage = () => {
                     </div>
                     <div className="success-section">
                         <div className="container">
-                            <div className="description">
+                            {/* <div className="description">
                                 <h3>Our Success</h3>
                                 <p>Ornare id fames interdum porttitor nulla turpis etiam. Diam vitae sollicitudin at nec nam et pharetra gravida. Adipiscing a quis ultrices eu ornare tristique vel nisl orci. </p>
-                            </div>
+                            </div> */}
                             <div className="numbers">
-                                <div className="number">
-                                    <h4>15K+</h4>
-                                    <p>Students</p>
-                                </div>
+                                <StudentCount number='15K+' description='Students' />
+                                <StudentCount number='5' description='Departments' />
+                                <StudentCount number='26' description='Chief Experts'/>
+                                <StudentCount number='5' description='Years Of Experience'/>
                             </div>
 
-                            <div className="software">
+                            {/* <div className="software">
                                 <h3>All-In-One Cloud Software</h3>
                                 <p>CSR Ltd is one powerful online software suite that combines all the tools needed to run a successful school or office.
                                 </p>
 
-                            </div>
+                            </div> */}
 
-                            <div className="cards">
+                            {/* <div className="cards">
+                                <SuccessCard/>
 
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 
                     <div className="about-us-section">
                         <div className="container">
                             <div className="description">
-                                <h3>What is CSR Ltd?</h3>
+                                <h3>What is CSR Ltd E-learning platform?
+                                </h3>
                                 <p>CSR Ltd is a platform that allows educators to create online classes whereby they can store the course materials online; manage assignments, quizzes and exams; monitor due dates; grade results and provide students with feedback all in one place.</p>
                             </div>
                             <div className="cards">
-
+                                <SuccessCard description="Teachers upload various educational materials & students can access course materials in a self-paced learning environment" title="Accessibility to Learning Resources"/>
+                                <SuccessCard description="This educational platform streamlines the management of courses and evaluations for teachers" title="Streamlined Course Management" />
+                                <SuccessCard description="Teachers can easily schedule and share information for all students to stay informed and participate in learning sessions" title="Communication & Collaboration" />
                             </div>
                             <div className="more-info">
                                 <div className="text-container">
                                     <h4>
                                     Everything you can do in a physical classroom, you can do with CSR Ltd
                                     </h4>
-                                    <p>TOTC’s school management software helps traditional and 
-online schools manage scheduling, attendance, payments 
-and virtual classrooms all in one secure cloud-based system.</p>
+                                    <p>The platform helps traditional and online courses manage scheduling and virtual classrooms all in one secure cloud-based system.</p>
                                     <a href="">Learn more</a>
                                 </div>
                                 <div className="image-container">
-
+                                    <img src="/images/play-button.svg" alt="play button" />
                                 </div>
                             </div>
                             
                         </div>
                     </div>
 
-                    <div className="features-section">
+                    {/* <div className="features-section">
                         <div className="container">
                             <div className="description">
                                 <h3>Our Features</h3>
@@ -113,21 +117,26 @@ and virtual classrooms all in one secure cloud-based system.</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="courses-section">
                         <div className="container">
-                            <div className="description">
-                                <h3>Explore Courses</h3>
-                                <p>Choose from over 220,000 online video courses with new additions published every month</p>
-                            </div>
-                            <div className="courses">
+                        <div className="courses">
+                            <div className="explore-overlay">
+            <h2>Explore</h2>
+            <button className="view-courses-btn">View our courses</button>
+          </div>
 
                             </div>
+                            <div className="description">
+                                <h3>View courses available & Enroll</h3>
+                                <p>Start a course today and learn new skills with all of the necessary tools for your progress.</p>
+                            </div>
+                            
                         </div>
                     </div>
 
-                    <div className="testimonial-section">
+                    {/* <div className="testimonial-section">
                         <div className="container">
                             <div className="description">
                                 <h3>What They Say?</h3>
@@ -141,7 +150,7 @@ and virtual classrooms all in one secure cloud-based system.</p>
                             <button>Write your assessment</button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <Footer/>
             </div>

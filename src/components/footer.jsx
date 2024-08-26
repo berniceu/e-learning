@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/components/footer.css';
 
 const Footer = () => {
     return(
@@ -7,7 +8,7 @@ const Footer = () => {
             <div className="container">
                 <div className="logo-name">
                     <div className="logo">
-
+                        <img src="/images/logo.svg" alt="logo" />
                     </div>
                     <div className="divider">
 
@@ -16,7 +17,7 @@ const Footer = () => {
                         <p>E-learning <br/>Platform</p>
                     </div>
                 </div>
-                <div className="subcribe">
+                <div className="subscribe">
                     <h2>Subscribe To Get Our Newsletter</h2>
                     <div className="form">
                     <input type="email" placeholder="Your Email" />
