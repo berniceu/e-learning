@@ -6,8 +6,10 @@ import Admin from './pages/admin/Admin.jsx';
 import Register from './Components/Register';
 import Login from './Components/Login';
 import LiveCourse from './Components/LiveCourse';
-import LiveDetails from './Components/LiveDetails'
+import LiveDetails from './Components/LiveDetails';
+import OtpVerification from './Components/OtpVerification.jsx';
 import CourseListWithPagination from './Components/CourseListWithPagination';
+import ResetPassword from './Components/ResetPassword.jsx';
 
 function App() {
   return (
@@ -20,7 +22,10 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/liveDetails" element={<LiveDetails />} />
           <Route path="/liveCourse" element={<LiveCourse />} />
+          <Route path="/otp-verification" element={<OtpVerification />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/admin" element={<Admin />}>
+          
           </Route>
         </Routes>
       </Router>
