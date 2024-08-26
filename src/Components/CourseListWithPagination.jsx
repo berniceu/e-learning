@@ -2,39 +2,21 @@ import React, { useState } from 'react';
 import CourseList from './CourseList';
 import Pagination from './Pagination';
 import '../style/index.css'
-import Header from '../components/header';
-import Footer from '../components/Footer';
+import Header from '../Components/header';
+import Footer from '../Components/footer';
+import {Courses} from '../Components/Courses';
 
 const CourseListWithPagination = () => {
-  const coursesData = [
-    {
-      title: "Introduction to React",
-      description: "Learn the basics of React",
-      image: "../images/react-intro.png",
-      duration: "4 weeks",
-      level: "Beginner"
-    },
-    {
-      title: "Advanced JavaScript",
-      description: "Deep dive into JavaScript concepts",
-      image: "../images/js-advanced.png",
-      duration: "6 weeks",
-      level: "Intermediate"
-    },
-  ];
-  const [currentPage, setCurrentPage] = useState(1);
-  const [courses, setCourses] = useState(coursesData);
+ const [currentPage, setCurrentPage] = useState(1);
+  const [courses, setCourses] = useState(Courses); // Manage state locally
   const itemsPerPage = 8;
 
-  
+  const totalPages = Math.ceil(courses.length / itemsPerPage);
 
-  const totalPages = Math.ceil(courses && courses.length / itemsPerPage);
-
-  const currentCourses = courses && courses.slice(
+  const currentCourses = courses.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
-
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
