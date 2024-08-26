@@ -1,101 +1,83 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import '../styles/courses/courses.css';
-import CoursePopup from "../components/courses/CoursePopup";
-import { IoBookmarks, IoFilter } from "react-icons/io5";
+import React, { useEffect, useState } from "react";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import { FaClock, FaBook } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import BASE_URL from "../config";
+import { Link } from "react-router-dom";
 
-
-
-
-const CoursesAvailable = () => {
-    const [searchTerm, setSearchTerm] = useState('');
-    const [isFilterOpen, setFilterOpen] = useState(false);
-    const [selectedFilters, setSelectedFilters] = useState({
-        level: 'Beginner friendly',
-        industry: 'Accounting'
-    });
-    const courses = [
-        { id: 1, name: "group1" },
-        { id: 2, name: "group1" },
-    ];
-    const filteredCourses = courses.filter(course => {
-        return course.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-            (course.level === selectedFilters.level || !selectedFilters.level) &&
-            (course.industry === selectedFilters.industry || !selectedFilters.industry);
-    });
-    const handleSearchChange = (e) => {
-        setSearchTerm(e.target.value);
-    };
-    const toggleFilter = () => {
-        setFilterOpen(!isFilterOpen);
-    };
-    const handleFilterChange = (type, value) => {
-        setSelectedFilters(prev => ({ ...prev, [type]: value }));
-    };
+const CourseCard = ({ course }) => {
+    const navigate = useNavigate();
 
     return (
-        <div className="courses-available">
-            <div className="filter_search_container">
-                <h2>Courses Available</h2>
-                <div className="search-bar">
-                    <input
-                        type="text"
-                        placeholder="search courses"
-                        value={searchTerm}
-                        onChange={handleSearchChange}
-                        className="bttn"
-                    />
-                    <button onClick={toggleFilter}>
-                        <span className="filter-icon"><IoFilter /></span> Filter courses
-                    </button>
-                </div>
-                {isFilterOpen && (
-                    <div className="filter-popup">
-                        <div className="filter-option">
-                            <h4>Course Level</h4>
-                            {['Beginner friendly', 'Moderate', 'Hard'].map(level => (
-                                <div
-                                    key={level}
-                                    onClick={() => handleFilterChange('level', level)}
-                                    className={selectedFilters.level === level ? 'selected' : ''}
-                                >
-                                    {level}
-                                </div>
-                            ))}
-                        </div>
-                        <div className="filter-option">
-                            <h4>Industry</h4>
-                            {['Accounting', 'Languages', 'Graphic design', 'Software Engineering', 'Digital Marketing', 'Tech support'].map(industry => (
-                                <div
-                                    key={industry}
-                                    onClick={() => handleFilterChange('industry', industry)}
-                                    className={selectedFilters.industry === industry ? 'selected' : ''}
-                                >
-                                    {industry}
-                                </div>
-                            ))}
-                        </div>
+        <div className="course-card" style={{ cursor: 'pointer' }} onClick={() => navigate(`/courses/${course.id}`)}>
+            <div className="img-container">
+                <img src={course.image} alt={course.title} />
+            </div>
+            <h2>{course.name}</h2>
+            <p>{course.description}</p>
+            <div className="hrs-level">
+                <div className="hours">
+                    <div>
+                        <FaClock size={20} color="#1E7938" />
                     </div>
-                )}
-                <div className="results">
-                    <span><IoBookmarks /></span> <strong>{filteredCourses.length}</strong> RESULTS
+                    <div className="time">
+                        <p>{course.duration} hours</p>
+                    </div>
+                </div>
+                <div className="level">
+                    <div>
+                        <FaBook size={20} color="#1E7938" />
+                    </div>
+                    <div className="level-text">
+                        <p>{course.level}</p>
+                    </div>
                 </div>
             </div>
         </div>
     );
 };
 
+const Courses = () => {
+    const [courses, setCourses] = useState([]);
 
+    useEffect(() => {
+        const fetchCourses = async () => {
+            try {
+                const response = await axios.get(`${BASE_URL}/api/dashboard/educational_resources/`);
+                console.log('API Response:', response.data);
+                setCourses(response.data.educational_resources);
+                console.log(response.data);
+            } catch (error) {
+                console.error('Error fetching courses:', error);
+            }
+        };
 
-const CoursesPage = () => {
-    return (
-        <>
-            <Navbar />
-            <CoursesAvailable />
-            <Footer />
-        </>
-    )
+        fetchCourses();
+    }, []);
+
+const isEmployer = () =>{
+    return localStorage.getItem('role') === 'staff';
 }
 
-export default CoursesPage;
+    return (
+        <>
+            <Header/>
+            <div className="courses-container">
+                <div className="courses-title">
+                    <h1>Courses</h1>
+                    {isEmployer() && <Link to="/courses/new-course" className="new-course-button">Add New Course</Link>}
+                </div>
+                <div className="courses-cards">
+                    {courses.map((course) => (
+                        <CourseCard key={course.id} course={course} />
+                    ))}
+                </div>
+            </div>
+            <Footer/>
+        </>
+    );
+};
+
+export default Courses;
