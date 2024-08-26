@@ -1,13 +1,485 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Register.css */
+
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Lexend", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.image-section {
+  flex: 1;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.student-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.form-section form {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.form-section input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #575758;
+}
+.role-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.role-btn {
+  flex: 1;
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #575758;
+  border-radius: 80px;
+  cursor: pointer;
+}
+
+.role-btn.active {
+  background-color: #84ceec;
+  color: white;
+}
+.create-account-btn {
+  padding: 15px;
+  background-color: #145C74;
+  color: white;
+  border: none;
+  border-radius: 80px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.signin-link {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+.signin-link a {
+  color: #004f6d;
+  text-decoration: none;
+}
+
+/* Login.css */
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  font-family: "Lexend", sans-serif;
+}
+
+.image-section {
+  flex: 1;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.student-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.sign-in-btn {
+  padding: 15px;
+  background-color: #004f6d;
+  color: white;
+  border: none;
+  border-radius: 80px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.signup-link a {
+  color: #004f6d;
+  text-decoration: none;
+}
+
+.footer {
+  background-color:#004f6d;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  form {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    input[type="email"] {
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 60px;
+      background-color: #004f6d;
+    }
+    .footer-btn {
+      padding: 10px 20px;
+      border: 1px solid white;
+      border-radius: 60px;
+      background-color: #004f6d;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      li {
+        margin: 0 10px;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}
+/* Live */
+.live-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  }
+.live-logo{
+  display: flex;
+  gap: 20px;
+  h2,h3{
+    color: #145C74;;
+  }
+}
+.live-button{
+  display: flex;
+  justify-content: flex-end;
+  background-color: #145C74;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.lesson-details{
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  img{
+    width: 50%;
+  }
+  .text{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h4{
+      background-color: #E3ECF0;
+      padding: 10px;
+      color: #145C74;
+      border-radius: 8px;
+      width: fit-content;
+    }
+    .join-btn{
+      background-color: #145C74;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 80px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .cancel-btn{
+      background-color: #fff;
+      color: #145C74;
+      padding: 10px 20px;
+      border: 1px solid #145C74;
+      border-radius: 80px;
+      font-size: 20px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  }
+  .timer{
+    display: flex;
+    gap: 20px;
+  }
+}
+
+/* live courses */
+
+.live-course {
+  font-family: "Lexend", sans-serif;
+  color: #145C74;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.live-course-header {
+  background-color: #004f6d;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.live-course-main {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+}
+
+.course-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.course-logo{
+  display: flex;
+  gap: 20px;
+  /* flex-direction: column; */
+}
+.go-back-btn {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #145C74;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.course-content {
+  display: flex;
+  gap: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-img {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.course-info {
+  flex: 1;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h4{
+    background-color: #E3ECF0;
+    padding: 10px;
+    color: #145C74;
+    border-radius: 8px;
+    width: fit-content;
+  }
+}
+
+.course-stats {
+  display: flex;
+  gap: 15px;
+  font-weight: bold;
+  margin-top: auto;
+  .stat{
+    background-color: #E3ECF0;
+    padding:3px;
+    border-radius: 6px;
+    color: #145C74;
+  }
+}
+
+.join-class-btn {
+  background-color: #145C74;
+  color: white;
+  border: none;
+  border-radius: 80px;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+/* popup section */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.course-form .form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.course-form .form-group textarea,
+.course-form .form-group input,
+.course-form .form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+.form-group textarea{
+  resize: none;
+}
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel-btn,
+.next-btn {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #f0f0f0;
+  color: #145C74;
+}
+
+.next-btn {
+  background-color: #145C74;
+  color: white;
+}
+
+.add-course-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.add-course-btn {
+  padding: 10px 20px;
+  background-color: #145C74;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
 }

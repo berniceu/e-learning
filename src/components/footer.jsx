@@ -32,7 +32,7 @@ const Footer = () => {
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms & Conditions</a></li>
                     </ul>
-                    <p>© 2021 Class CSR Ltd</p>
+                    <p>&copy; {new Date().getFullYear()} Class CSR Ltd</p>
                 </div>
             </div>
         </div>

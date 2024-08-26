@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import CourseList from './CourseList';
 import Pagination from './Pagination';
 import '../style/index.css'
-import Header from './header';
-import Footer from './footer';
+import Header from '../components/header';
+import Footer from '../components/Footer';
 
 const CourseListWithPagination = () => {
   const coursesData = [
