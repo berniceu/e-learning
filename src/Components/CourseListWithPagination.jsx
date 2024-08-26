@@ -3,7 +3,7 @@ import CourseList from './CourseList';
 import Pagination from './Pagination';
 import '../style/index.css'
 import Header from '../Components/header';
-import Footer from './footer';
+import Footer from '../Components/footer';
 
 const CourseListWithPagination = () => {
   const coursesData = [
