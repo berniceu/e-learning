@@ -5,6 +5,9 @@
 }
 /* Register.css */
 
+input{
+  outline: none;
+}
 .register-page {
   display: flex;
   justify-content: center;
