@@ -3,15 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lexend", sans-serif;
-}
-
-h1 {
-  font-size: 26px;
-  color: #145c74;
-  font-weight: 600;
-  font-family: "Lexend", sans-serif;
-  padding-top: 10px;
 }
 
 .users-list-container {
@@ -103,6 +94,4 @@ h1 {
   color: #999;
   text-align: center;
   font-weight: 300;
-}
-
-/*# sourceMappingURL=admin.css.map */
+}/*# sourceMappingURL=admin.css.map */

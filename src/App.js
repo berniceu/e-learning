@@ -3,12 +3,12 @@ import Homepage from './pages/Homepage';
 import '../src/styles/home/home.css';
 import { AppProvider } from "./context/Context";
 import Admin from './pages/admin/Admin.jsx';
-import Register from './Components/Register';
+import Register from './Components/Register.jsx'
 import Login from './Components/Login';
 import LiveCourse from './Components/LiveCourse';
 import LiveDetails from './Components/LiveDetails';
 import OtpVerification from './Components/OtpVerification.jsx';
-import CourseListWithPagination from './Components/CourseListWithPagination';
+import CourseListWithPagination from './Components/CourseListWithPagination.jsx';
 import ResetPassword from './Components/ResetPassword.jsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

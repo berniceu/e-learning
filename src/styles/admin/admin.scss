@@ -17,17 +17,17 @@ $button-height: 3.75rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: $font;
+  // font-family: $font;
 }
 
 
-h1 {
-  font-size: 26px;
-  color: $primary_color;
-  font-weight: 600;
-  font-family: $font;
-  padding-top: 10px;
-}
+// h1 {
+//   font-size: 26px;
+//   color: $primary_color;
+//   font-weight: 600;
+//   font-family: $font;
+//   padding-top: 10px;
+// }
 .users-list-container {
   display: flex;
   flex-direction: column;

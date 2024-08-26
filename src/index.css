@@ -166,7 +166,7 @@ input{
   text-decoration: none;
 }
 
-.footer {
+/* .footer {
   background-color:#004f6d;
   color: #fff;
   padding: 10px;
@@ -215,7 +215,7 @@ input{
   p {
     margin-top: 20px;
   }
-}
+} */
 /* Live */
 .live-details {
   display: flex;

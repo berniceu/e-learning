@@ -5,8 +5,10 @@ import '../styles/main.css'
 import '../styles/home/home.css'
 import SuccessCard from '../Components/successCard';
 import StudentCount from '../Components/studentCount'
+import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
+    const navigate = useNavigate();
     return(
         <>
         <div className="home">
@@ -17,9 +19,9 @@ const Homepage = () => {
                         <div className="container">
                             <div className="text-container">
                             <h1>Studying Online is now much easier</h1>
-                            <p>TOTC is an interesting platform that will teach you in more an interactive way</p>
+                            <p>CSR e-learning platform is an interesting platform that will teach you more in an interactive way</p>
                             <div className="buttons">
-                                <button className="join">Join for free</button>
+                                <button className="join" onClick={() => {navigate('/signup')}}>Join for free</button>
                                 {/* <button className="watch">Watch how it works</button> */}
                             </div>
                             </div>
@@ -78,10 +80,10 @@ const Homepage = () => {
                                     Everything you can do in a physical classroom, you can do with CSR Ltd
                                     </h4>
                                     <p>The platform helps traditional and online courses manage scheduling and virtual classrooms all in one secure cloud-based system.</p>
-                                    <a href="">Learn more</a>
+                                    <a href="https://www.youtube.com/watch?v=eBEswRd4l64" target="_blank">Learn more</a>
                                 </div>
                                 <div className="image-container">
-                                    <img src="/images/play-button.svg" alt="play button" />
+                                    <img src="/images/play-button.svg" alt="play button" onClick={() => window.open('https://www.youtube.com/watch?v=eBEswRd4l64', '_blank')} style={{cursor: 'pointer'}} />
                                 </div>
                             </div>
                             
@@ -125,7 +127,7 @@ const Homepage = () => {
                         <div className="courses">
                             <div className="explore-overlay">
             <h2>Explore</h2>
-            <button className="view-courses-btn">View our courses</button>
+            <button className="view-courses-btn" onClick={() => navigate('/courses')}>View our courses</button>
           </div>
 
                             </div>
