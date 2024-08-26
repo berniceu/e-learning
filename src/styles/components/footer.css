@@ -32,6 +32,9 @@
   background-color: #145C74;
   max-width: 400px;
   width: 100%;
+  outline: none;
+  color: #fff;
+  font-size: 14px;
 }
 .footer .container .subscribe .form input::-moz-placeholder {
   font-family: "Poppins", "sans-serif";

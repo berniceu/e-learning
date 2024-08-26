@@ -20,7 +20,7 @@
 .header .header-container .navbar ul {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 24px;
 }
 .header .header-container .login-signup {
   display: flex;
