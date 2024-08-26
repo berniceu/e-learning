@@ -21,9 +21,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/liveDetails" element={<LiveDetails />} />
           <Route path="/liveCourse" element={<LiveCourse />} />
-
           <Route path="/admin" element={<Admin />}>
-            {/* <Route path="admin/???" element={< kk />} /> */}
           </Route>
         </Routes>
       </Router>
