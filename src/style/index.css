@@ -16,6 +16,11 @@
   padding-inline: 8%;
 }
 
+.courses {
+  min-height: 90vh;
+  background-color: #f8f8f8;
+}
+
 .courses-card {
   width: 100%;
   padding-block: 20px;

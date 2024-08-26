@@ -21,12 +21,18 @@
   .main-layout{    
     padding-inline: 8%;
   }
+
+  .courses{
+    min-height: 90vh;
+    background-color: #f8f8f8;
+  }
   .courses-card {
     width: 100%;
     padding-block: 20px;
     background: #f8f8f8;
     @include grid();
     height: 1;
+    
     
     .course {
       background: #fff;

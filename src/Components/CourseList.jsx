@@ -4,7 +4,7 @@ import DeleteCourse from './DeleteCourse';
 const CourseList = ({ courses, deleteCourse }) => {
   return (
     <div className="courses-card">
-      {courses.map((course, index) => (
+      {courses && courses.map((course, index) => (
         <div key={index} className="course">
           <div className="img">
             <img src={course.image} alt={course.title} />
