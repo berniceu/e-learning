@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminHeader from "../../components/admin/AdminHeader";
+import CoursesTable from "../../components/admin/CoursesAdmin"
 import Footer from "../../components/Footer";
 import '../../styles/admin/admin.css'
-import { IoPerson } from 'react-icons/io5';
+import { IoPerson, IoTrashBin, IoPencilOutline } from 'react-icons/io5';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
 
+/* display users */
 ChartJS.register(ArcElement, Tooltip, Legend);
 const createPieChartData = (users) => {
     const activeUsers = users.filter(user => user.status === 'active').length;
@@ -32,26 +34,26 @@ function UserGroupWrapper({ title, chartData, users }) {
                     <Pie data={chartData} />
                 </div>
                 <div className="user-details">
-                    <h3 className="title">{title}</h3>
+                    <h2>{title}</h2>
                     {users.length > 0 ? (
                         <table className="user-table">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
                                     <th>Email</th>
                                     <th>Password</th>
                                     <th>Date Created</th>
+                                    <th>Registered as</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {users.map(user => (
                                     <tr key={user.id}>
-                                        <td>{user.id}</td>
-                                        <td>{user.name}</td>
                                         <td>{user.email}</td>
                                         <td>{user.password}</td>
                                         <td>{user.dateCreated}</td>
+                                        <td>{user.registered}</td>
+                                        <td><IoPencilOutline /> <IoTrashBin /></td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -66,15 +68,16 @@ function UserGroupWrapper({ title, chartData, users }) {
 };
 export const UsersList = () => {
     const [users] = useState([
-        { id: 1, name: 'Cilian Murphy', email: 'cimurph@gmail.com', password: '******', dateCreated: '2024-08-01', status: 'active' },
-        { id: 2, name: 'Junior Keza', email: 'jun1or34@gmail.com', password: '******', dateCreated: '2024-07-20', status: 'enrolled' },
-        { id: 3, name: 'Michael Jackson', email: 'michaeljk@gmail.com', password: '******', dateCreated: '2024-06-15', status: 'inactive' },
-        { id: 4, name: 'Scarlett Jackson', email: 'sc@rlettt@gmail.com', password: '******', dateCreated: '2024-08-10', status: 'active' },
-        { id: 5, name: 'David Manzi', email: 'davidmanzi@gmail.com', password: '******', dateCreated: '2024-05-05', status: 'inactive' }
+        { id: 1, name: 'Cilian Murphy', email: 'cimurph@gmail.com', password: '******', dateCreated: '2024-08-01', status: 'active', registered: 'Instructor' },
+        { id: 2, name: 'Junior Keza', email: 'jun1or34@gmail.com', password: '******', dateCreated: '2024-07-20', status: 'enrolled', registered: 'Student' },
+        { id: 3, name: 'Michael Jackson', email: 'michaeljk@gmail.com', password: '******', dateCreated: '2024-06-15', status: 'inactive', registered: 'Student' },
+        { id: 4, name: 'Scarlett Jackson', email: 'sc@rlettt@gmail.com', password: '******', dateCreated: '2024-08-10', status: 'active', registered: 'Instructor' },
+        { id: 5, name: 'David Manzi', email: 'davidmanzi@gmail.com', password: '******', dateCreated: '2024-05-05', status: 'inactive', registered: 'Student' }
     ]);
     const chartData = createPieChartData(users);
     return (
         <div className="users-list-container">
+            <h1>Dashboard</h1>
             <UserGroupWrapper title="Users Overview" chartData={chartData} users={users} />
         </div>
     );
@@ -85,24 +88,6 @@ export const UsersList = () => {
 
 
 
-export const CoursesTable = ({ setSelectedCourse, setCoursesTable }) => {
-    const Courses = [
-        { id: 1, name: "group1" },
-        { id: 2, name: "group1" },
-    ];
-    const getFilteredCourses = () => {
-        return Courses.filter((course) => { });
-    };
-    const filteredCourses = getFilteredCourses();
-    return (
-        <>
-            <div className="users">
-                <h2>users</h2>
-            </div>
-        </>
-    );
-};
-
 
 
 
@@ -111,6 +96,11 @@ const Admin = () => {
         <>
             <AdminHeader />
             <UsersList />
+            <div className="users-list-container">
+                <div className="user-group-wrapper">
+                    <CoursesTable />
+                </div>
+            </div>
             <Footer />
         </>
     )

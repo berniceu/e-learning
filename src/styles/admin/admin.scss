@@ -20,14 +20,21 @@ $button-height: 3.75rem;
   font-family: $font;
 }
 
+
+h1 {
+  font-size: 26px;
+  color: $primary_color;
+  font-weight: 600;
+  font-family: $font;
+  padding-top: 10px;
+}
 .users-list-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
   background-color: #f8f9fa;
 }
-
 .user-group-wrapper {
   background-color: white;
   padding: 20px;
@@ -36,50 +43,84 @@ $button-height: 3.75rem;
   border: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
-  
   .group-content {
     display: flex;
     align-items: center;
-
+    max-width: 100%;
     .chart-container {
-      flex: 1;
-      max-width: 300px;
+      max-width: 100%;
       height: auto;
-      display: flex;
       justify-content: center;
     }
-
-    .user-details {
-      flex: 2;
-      padding-left: 20px;
-      
-      .title {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 15px;
-      }
-
-      .user-card {
-        background-color: #f1f5f9;
-        padding: 15px;
-        margin-bottom: 10px;
-        border-radius: 8px;
-        border: 1px solid #cbd5e0;
-
-        .user-detail {
-          font-size: 0.9rem;
-          color: #4a5568;
-          margin-bottom: 5px;
+  }
+  .group-content-courses{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    .user-details{
+      padding: 0px;
+    }
+    .chart-container {
+      width: 100%;
+    }
+  }
+  .user-details {
+    flex: 2;
+    padding-left: 20px;
+    width: 100%;
+    h2 {
+      font-size: 22px;
+      color: $primary_color;
+      font-weight: 400;
+      font-family: $font;
+    }
+    .user-detail {
+      font-size: 0.9rem;
+      color: #4a5568;
+      margin-bottom: 5px;
+    }
+    .user-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 1rem;
+      text-align: left;
+      thead {
+        background-color: #f4f6f8;
+        th {
+          padding: 12px 15px;
+          color: $primary_color;
+          font-weight: 400;
+          font-family: $font;
         }
       }
-
-      .no-users {
-        font-size: 0.9rem;
-        color: #a0aec0;
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+          &:hover {
+            background-color: $secondary_color;
+          }
+          td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+          }
+        }
       }
+    }
+    .no-users {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #999;
+      text-align: center;
+      font-weight: 300;
     }
   }
 }
+
 
 
