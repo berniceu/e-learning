@@ -197,7 +197,7 @@ button {
 }
 .home .home-container .main-div .courses-section .courses {
   flex: 1;
-  background-image: url("/public/images/class.png");
+  background-image: url("/public/images/courses.png");
   background-size: cover;
   background-position: center;
   min-height: 300px;
