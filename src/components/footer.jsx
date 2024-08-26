@@ -1,45 +1,43 @@
-import { FaSearch } from 'react-icons/fa';
-import React, { useState, useEffect } from "react";
-import '../styles/main/main.css';
-import { NavLink } from 'react-router-dom';
-
+import React from "react";
+import '../styles/components/footer.css';
 
 const Footer = () => {
-    return (
-        <footer >
-            <div className="footer_container">
-                <div className="footer_logo">
+    return(
+        <>
+        <div className="footer">
+            <div className="container">
+                <div className="logo-name">
                     <div className="logo">
-                        <img src="./images/logo.png" alt="" />
+                        <img src="/images/logo.svg" alt="logo" />
                     </div>
-                    <div class="divider"></div>
-                    <div className="footer_title">E-learning <br /> Platform</div>
+                    <div className="divider">
+
+                    </div>
+                    <div className="name">
+                        <p>E-learning <br/>Platform</p>
+                    </div>
                 </div>
-                <div className="footer_subscribe">
-                    <p>Subscribe to get our Newsletter</p>
-                    <form className="footer_form">
-                        <input
-                            type="email"
-                            placeholder="Your Email"
-                            className="bttn signup"
-                        />
-                        <button type="submit" className="bttn signup">
-                            Subscribe
-                        </button>
-                    </form>
+                <div className="subscribe">
+                    <h2>Subscribe To Get Our Newsletter</h2>
+                    <div className="form">
+                    <input type="email" placeholder="Your Email" />
+                    <button type="submit">Subscribe</button>
+                    </div>
+                    
                 </div>
-                <div className="footer_links">
-                    <a href="#careers">Careers</a>
-                    <div class="divider"></div>
-                    <a href="#privacy-policy">Privacy Policy</a>
-                    <div class="divider"></div>
-                    <a href="#terms-conditions">Terms & Conditions</a>
-                </div>
-                <div className="footer_copyright">
-                    &copy; 2021 Class CSR Ltd.
+
+                <div className="links">
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                    <p>© 2021 Class CSR Ltd</p>
                 </div>
             </div>
-        </footer>
+        </div>
+        
+        </>
     )
 }
 

@@ -1,1 +1,265 @@
-/*# sourceMappingURL=home.css.map */
+button {
+  border-radius: 24px;
+  color: #fff;
+  border: none;
+}
+
+.home .home-container .main-div .hero-section {
+  min-height: 100vh;
+  background-color: #145C74;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 0px 0px 24% 24%;
+}
+.home .home-container .main-div .hero-section .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+.home .home-container .main-div .hero-section .container .text-container {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home .home-container .main-div .hero-section .container .text-container .buttons {
+  display: flex;
+  gap: 10px;
+}
+.home .home-container .main-div .hero-section .container .text-container .buttons .join {
+  background: rgba(255, 255, 255, 0.3);
+}
+.home .home-container .main-div .hero-section .container .text-container .buttons .watch {
+  background: none;
+}
+.home .home-container .main-div .hero-section .container .image-container {
+  position: relative;
+}
+.home .home-container .main-div .hero-section .container .info {
+  position: absolute;
+  left: 45%;
+  max-width: 500px;
+  top: 120px;
+}
+.home .home-container .main-div .hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #145C74;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  transform: scaleX(1.5);
+}
+.home .home-container .main-div .success-section .container .numbers {
+  display: flex;
+  justify-content: space-around;
+}
+.home .home-container .main-div .success-section .container .student-count {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.home .home-container .main-div .success-section .container .student-count h2 {
+  font-size: 48px;
+  font-weight: 200;
+  margin: 0;
+}
+.home .home-container .main-div .success-section .container .student-count p {
+  font-size: 18px;
+  color: #666;
+  margin: 5px 0 0;
+}
+.home .home-container .main-div .about-us-section {
+  font-family: "Poppins", "sans-serif";
+}
+.home .home-container .main-div .about-us-section p {
+  color: #696984;
+}
+.home .home-container .main-div .about-us-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home .home-container .main-div .about-us-section .container .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 50px;
+}
+.home .home-container .main-div .about-us-section .container .cards .success-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.home .home-container .main-div .about-us-section .container .cards .success-card .icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.home .home-container .main-div .about-us-section .container .cards .success-card .icon-container {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .home-container .main-div .about-us-section .container .cards .success-card .icon-container img {
+  width: 30px;
+  height: 30px;
+}
+.home .home-container .main-div .about-us-section .container .cards .success-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.home .home-container .main-div .about-us-section .container .cards .success-card p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+.home .home-container .main-div .about-us-section .container .description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  padding-bottom: 50px;
+}
+.home .home-container .main-div .about-us-section .container .more-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 80px;
+  gap: 10rem;
+}
+.home .home-container .main-div .about-us-section .container .more-info a {
+  color: #696984;
+  text-decoration: underline;
+}
+.home .home-container .main-div .about-us-section .container .more-info .text-container {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.home .home-container .main-div .about-us-section .container .more-info .image-container {
+  width: 400px;
+  min-height: 250px;
+  background-image: url("/public/images/class.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.home .home-container .main-div .about-us-section .container .more-info .image-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  height: auto;
+}
+.home .home-container .main-div .features-section {
+  padding-block: 80px;
+}
+.home .home-container .main-div .features-section .container .description {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home .home-container .main-div .features-section .container .more-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .home-container .main-div .features-section .container .more-info h4 {
+  font-size: 24px;
+}
+.home .home-container .main-div .features-section .container .more-info a {
+  color: #696984;
+  text-decoration: underline;
+}
+.home .home-container .main-div .courses-section {
+  padding-block: 80px;
+  font-family: "Poppins", "sans-serif";
+}
+.home .home-container .main-div .courses-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.home .home-container .main-div .courses-section .courses {
+  flex: 1;
+  background-image: url("/public/images/courses.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.home .home-container .main-div .courses-section .courses .explore-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.home .home-container .main-div .courses-section .courses .explore-overlay h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.home .home-container .main-div .courses-section .courses .explore-overlay .view-courses-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid #fff;
+}
+.home .home-container .main-div .courses-section .courses .explore-overlay .view-courses-btn:hover {
+  background: #333;
+}
+.home .home-container .main-div .courses-section .description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+}
+.home .home-container .main-div .courses-section .description h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.home .home-container .main-div .courses-section .description p {
+  font-size: 1rem;
+  color: #666;
+}/*# sourceMappingURL=home.css.map */
