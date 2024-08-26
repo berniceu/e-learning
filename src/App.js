@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import '../src/styles/home/home.css';
 import Courses from './pages/coursesPage';
-import Register from './components/Register';
-import Login from './components/Login';
-import LiveCourse from './components/LiveCourse';
-import LiveDetails from './components/LiveDetails'
-import CourseListWithPagination from '../src/components/CourseListWithPagination';
+import Register from './Components/Register';
+import Login from './Components/Login';
+import LiveCourse from './Components/LiveCourse';
+import LiveDetails from './Components/LiveDetails'
+import CourseListWithPagination from './Components/CourseListWithPagination';
 
 function App() {
   return (
