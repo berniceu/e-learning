@@ -26,6 +26,7 @@ const Homepage = () => {
                             <div className="image-container">
                                 <img src="/images/class.png" alt="hero image" />
                             </div>
+                            <img src="/images/info.png" alt="" className="info" />
                             
                         </div>
                         <div className="curve">

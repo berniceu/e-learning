@@ -5,17 +5,19 @@ button {
 }
 
 .home .home-container .main-div .hero-section {
-  min-height: 80vh;
+  min-height: 100vh;
   background-color: #145C74;
   color: #fff;
   display: flex;
   align-items: center;
   overflow: hidden;
   position: relative;
+  border-radius: 0px 0px 24% 24%;
 }
 .home .home-container .main-div .hero-section .container {
   display: flex;
   justify-content: space-between;
+  gap: 10rem;
 }
 .home .home-container .main-div .hero-section .container .text-container {
   max-width: 500px;
@@ -35,8 +37,13 @@ button {
   background: none;
 }
 .home .home-container .main-div .hero-section .container .image-container {
-  max-width: 600px;
-  width: 100%;
+  position: relative;
+}
+.home .home-container .main-div .hero-section .container .info {
+  position: absolute;
+  left: 45%;
+  max-width: 500px;
+  top: 120px;
 }
 .home .home-container .main-div .hero-section::after {
   content: "";
@@ -60,7 +67,7 @@ button {
 }
 .home .home-container .main-div .success-section .container .student-count h2 {
   font-size: 48px;
-  font-weight: bold;
+  font-weight: 200;
   margin: 0;
 }
 .home .home-container .main-div .success-section .container .student-count p {
@@ -138,6 +145,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-block: 80px;
+  gap: 10rem;
 }
 .home .home-container .main-div .about-us-section .container .more-info a {
   color: #696984;
@@ -166,6 +175,9 @@ button {
   max-width: 100%;
   height: auto;
 }
+.home .home-container .main-div .features-section {
+  padding-block: 80px;
+}
 .home .home-container .main-div .features-section .container .description {
   text-align: center;
   display: flex;
@@ -185,7 +197,7 @@ button {
   text-decoration: underline;
 }
 .home .home-container .main-div .courses-section {
-  padding: 2rem 0;
+  padding-block: 80px;
   font-family: "Poppins", "sans-serif";
 }
 .home .home-container .main-div .courses-section .container {
@@ -197,7 +209,7 @@ button {
 }
 .home .home-container .main-div .courses-section .courses {
   flex: 1;
-  background-image: url("/public/images/class.png");
+  background-image: url("/public/images/courses.png");
   background-size: cover;
   background-position: center;
   min-height: 300px;
@@ -240,6 +252,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 500px;
 }
 .home .home-container .main-div .courses-section .description h3 {
   font-size: 1.75rem;
