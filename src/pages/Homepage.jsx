@@ -6,7 +6,7 @@ import CoursePopup from "../components/courses/CoursePopup";
 const Homepage = () => {
     return (
         <>
-            <CoursePopup />
+            
         </>
     )
 }
