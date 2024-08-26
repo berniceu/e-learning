@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AdminHeader from "../../components/admin/AdminHeader";
 import CoursesTable from "../../components/admin/CoursesAdmin"
-import Footer from "../../components/Footer";
-import '../../styles/admin/admin.css'
+import Footer from "../../components/footer";
+import '../../styles/admin/admin.css';
 import { IoPerson, IoTrashBin, IoPencilOutline } from 'react-icons/io5';
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
