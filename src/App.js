@@ -10,6 +10,8 @@ import LiveDetails from './Components/LiveDetails';
 import OtpVerification from './Components/OtpVerification.jsx';
 import CourseListWithPagination from './Components/CourseListWithPagination';
 import ResetPassword from './Components/ResetPassword.jsx';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
           </Route>
         </Routes>
       </Router>
+      <ToastContainer position="top-right" autoClose={5000} />
     </AppProvider>
   );
 }
