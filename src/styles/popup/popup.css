@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  display: grid;
+  place-items: center;
+  z-index: 30;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.popup {
+  width: 747px;
+  justify-content: center;
+  align-items: center;
+}
+.popup .add-course {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.popup .add-course .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #145c74;
+  font-family: "Lexend", sans-serif;
+  font-size: 20px;
+}
+.popup .add-course .title .icon button {
+  border: none;
+  background: transparent;
+  font-size: 26px;
+  outline: none;
+}
+.popup .add-course form .form-step {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+}
+.popup .add-course form .input-fields {
+  display: flex;
+  align-items: start;
+  gap: 1.5rem;
+  width: 100%;
+}
+.popup .add-course form .input-fields label {
+  font-size: 14px;
+  font-family: "Lexend", sans-serif;
+  color: #6e6e6e;
+}
+.popup .add-course form .input-fields input,
+.popup .add-course form .input-fields textarea,
+.popup .add-course form .input-fields select {
+  width: 100%;
+  color: #6e6e6e;
+  border-radius: 5rem;
+  outline: none;
+  padding: 1rem 3rem;
+  border: 1px solid #6e6e6e;
+  font-family: "Lexend", sans-serif;
+}
+.popup .add-course form .input-fields textarea {
+  resize: none;
+  height: 100px;
+  width: 100%;
+  border-radius: 20px;
+}
+.popup .add-course form .input-fields .field {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  flex-direction: column;
+  width: 100%;
+}
+.popup .add-course form .input-fields .field input {
+  border: 1px solid #6e6e6e;
+  color: #6e6e6e;
+  width: 100%;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  outline: none;
+}
+.popup .add-course form .input-fields.date-fields {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+.popup .add-course form .input-fields.date-fields .field {
+  flex: 1;
+}
+.popup .add-course form .btns {
+  display: flex;
+  align-items: start;
+  gap: 1.5rem;
+  width: 100%;
+  padding-top: 12px;
+}
+
+.cancel-btn {
+  width: 100%;
+  color: #145c74;
+  outline: none;
+  border: 2px solid #145c74;
+  background-color: #ffffff;
+}
+
+.add-btn {
+  width: 100%;
+  color: #ffffff;
+  outline: none;
+  background-color: #145c74;
+}
+
+/*# sourceMappingURL=popup.css.map */

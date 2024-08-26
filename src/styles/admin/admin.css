@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+}
+
+h1 {
+  font-size: 26px;
+  color: #145c74;
+  font-weight: 600;
+  font-family: "Lexend", sans-serif;
+  padding-top: 10px;
+}
+
+.users-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f8f9fa;
+}
+
+.user-group-wrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+.user-group-wrapper .group-content {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+.user-group-wrapper .group-content .chart-container {
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+}
+.user-group-wrapper .group-content-courses {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+}
+.user-group-wrapper .group-content-courses .user-details {
+  padding: 0px;
+}
+.user-group-wrapper .group-content-courses .chart-container {
+  width: 100%;
+}
+.user-group-wrapper .user-details {
+  flex: 2;
+  padding-left: 20px;
+  width: 100%;
+}
+.user-group-wrapper .user-details h2 {
+  font-size: 22px;
+  color: #145c74;
+  font-weight: 400;
+  font-family: "Lexend", sans-serif;
+}
+.user-group-wrapper .user-details .user-detail {
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 5px;
+}
+.user-group-wrapper .user-details .user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+}
+.user-group-wrapper .user-details .user-table thead {
+  background-color: #f4f6f8;
+}
+.user-group-wrapper .user-details .user-table thead th {
+  padding: 12px 15px;
+  color: #145c74;
+  font-weight: 400;
+  font-family: "Lexend", sans-serif;
+}
+.user-group-wrapper .user-details .user-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.user-group-wrapper .user-details .user-table tbody tr:hover {
+  background-color: #f8f7f7;
+}
+.user-group-wrapper .user-details .user-table tbody tr td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  font-size: 14px;
+}
+.user-group-wrapper .user-details .no-users {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #999;
+  text-align: center;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=admin.css.map */

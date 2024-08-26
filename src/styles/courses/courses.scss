@@ -1,3 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+$primary_color: #145c74;
+$primary_grey: #575758;
+$secondary_color: #f8f7f7;
+$sec_grey: #6e6e6e;
+$white: #ffffff;
+$black: #000000;
+$font: "Lexend", sans-serif;
+$primary_gap: 1.5rem;
+$sec_gap: 0.75rem;
+
+$button-border-radius: 5rem;
+$button-padding: 1rem 4rem;
+$button-height: 3.75rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+
+.courses-available {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1.875rem;
+  background-color: $white;
+  flex-direction: column;
+  .filter_search_container {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $primary_gap;
+    position: relative;
+    h2 {
+      font-size: 22px;
+      color: $primary_color;
+      font-weight: 400;
+      font-family: $font;
+    }
+    .search-bar {
+      display: flex;
+      gap: 10px;
+      input[type="text"] {
+        width: 300px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        font-size: 16px;
+        outline: none;
+      }
+      button {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+        outline: none;
+        .filter-icon {
+          margin-right: 5px;
+        }
+      }
+    }
+    .filter-popup {
+      position: absolute;
+      display: flex;
+      gap: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: $secondary_color;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      .filter-option {
+        display: flex;
+        flex-direction: column;
+        h4 {
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+        div {
+          cursor: pointer;
+          padding: 5px 0;
+          &.selected {
+            font-weight: bold;
+            color: $primary_color;
+          }
+        }
+      }
+    }
+    .results {
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  }
+}
+
 .course-card{
     display: flex;
     flex-direction: column;

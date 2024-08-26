@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+$primary_color: #145c74;
+$primary_grey: #575758;
+$secondary_color: #f8f7f7;
+$sec_grey: #6e6e6e;
+$white: #ffffff;
+$black: #000000;
+$font: "Lexend", sans-serif;
+$primary_gap: 1.5rem;
+$sec_gap: 0.75rem;
+
+$button-border-radius: 5rem;
+$button-padding: 1rem 4rem;
+$button-height: 3.75rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+
+h1 {
+  font-size: 26px;
+  color: $primary_color;
+  font-weight: 600;
+  font-family: $font;
+  padding-top: 10px;
+}
+.users-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f8f9fa;
+}
+.user-group-wrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  .group-content {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    .chart-container {
+      max-width: 100%;
+      height: auto;
+      justify-content: center;
+    }
+  }
+  .group-content-courses{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    .user-details{
+      padding: 0px;
+    }
+    .chart-container {
+      width: 100%;
+    }
+  }
+  .user-details {
+    flex: 2;
+    padding-left: 20px;
+    width: 100%;
+    h2 {
+      font-size: 22px;
+      color: $primary_color;
+      font-weight: 400;
+      font-family: $font;
+    }
+    .user-detail {
+      font-size: 0.9rem;
+      color: #4a5568;
+      margin-bottom: 5px;
+    }
+    .user-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 1rem;
+      text-align: left;
+      thead {
+        background-color: #f4f6f8;
+        th {
+          padding: 12px 15px;
+          color: $primary_color;
+          font-weight: 400;
+          font-family: $font;
+        }
+      }
+      tbody {
+        tr {
+          &:nth-child(even) {
+            background-color: #f9f9f9;
+          }
+          &:hover {
+            background-color: $secondary_color;
+          }
+          td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .no-users {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #999;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+}
+
+
+
