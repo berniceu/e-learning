@@ -9,7 +9,7 @@ const ForgotPassword = () => {
     event.preventDefault();
     console.log(`OTP sent to: ${email}`);
     
-    navigate('/OtpVerification');
+    navigate('/otp-verification');
   };
 
   return (

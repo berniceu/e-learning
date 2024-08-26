@@ -25,7 +25,7 @@ const OtpVerification = ({ onConfirm }) => {
         onConfirm(enteredOtp); 
       }
      
-      navigate("/ResetPassword");
+      navigate("/reset-password");
     } else {
       alert("Incorrect OTP. Please try again.");
     }
