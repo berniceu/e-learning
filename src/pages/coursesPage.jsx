@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Components/header";
-import Footer from "../Components/footer";
+import Footer from "../Components/Footer";
 import { FaClock, FaBook } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
