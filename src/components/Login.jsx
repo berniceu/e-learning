@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ForgotPassword from './ForgotPassword';
 
 const Login = () => {
+  const [isForgotPasswordVisible, setForgotPasswordVisible] = useState(false);
+
+  const handleForgotPasswordClick = () => {
+    setForgotPasswordVisible(true);
+  };
+
+  const handleBackToLogin = () => {
+    setForgotPasswordVisible(false);
+  };
+
   return (
     <div className="login-page">
       <div className="image-section">
@@ -13,19 +24,26 @@ const Login = () => {
       </div>
 
       <div className="form-section">
-        <h2>Sign in to your account</h2>
-        <form>
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-
-          <button type="submit" className="sign-in-btn">
-            Sign in
-          </button>
-        </form>
-
-        <p className="signup-link">
-          Don't have an account? <Link to="/register">Sign up</Link>
-        </p>
+        {!isForgotPasswordVisible ? (
+          <>
+            <h2>Sign in to your account</h2>
+            <form>
+              <input type="email" placeholder="Email" required />
+              <input type="password" placeholder="Password" required />
+              <p onClick={handleForgotPasswordClick} className="forgot-password-link">
+                Forgot Password?
+              </p>
+              <button type="submit" className="sign-in-btn">
+                Sign in
+              </button>
+            </form>
+            <p className="signup-link">
+              Don't have an account? <Link to="/register">Sign up</Link>
+            </p>
+          </>
+        ) : (
+          <ForgotPassword onBackToLogin={handleBackToLogin} />
+        )}
       </div>
     </div>
   );

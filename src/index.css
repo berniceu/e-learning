@@ -483,3 +483,196 @@
   font-size: 16px;
   cursor: pointer;
 }
+.add-course-btn:hover {
+  background-color: #3988a3;
+} 
+/* forgot password*/
+ .forgot{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+.forgot-password-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.forgot-password-container h2 {
+  margin-bottom: 10px;
+}
+
+.forgot-password-container .form-group input{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #575758;
+}
+.send-otp-btn {
+  background-color: #145C74;
+  color: white;
+  border-radius: 80px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.send-otp:hover {
+  background-color: #3988a3;
+}
+
+.forgot-password-link {
+  color: #4a90e2;
+  cursor: pointer;
+  text-decoration: none;
+}
+.forgot-login{
+  color: #4a90e2;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* Otp verification style */
+.otp-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.otp-verification-container {
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+  flex: 1;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.otp-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.otp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.otp-input {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.confirm-btn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #145C74;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background-color: #3988a3;
+} 
+
+/* reset password page */
+
+.reset-container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reset-password-container {
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+  flex: 1;
+  background-color: #e0f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.reset-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.form-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reset-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reset-btn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #145C74;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: #3988a3;
+} 
