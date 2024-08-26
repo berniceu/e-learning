@@ -1,44 +1,23 @@
-import React from "react";
-import '../styles/components/footer.css';
+import React from 'react';
 
-const Footer = () => {
-    return(
-        <>
-        <div className="footer">
-            <div className="container">
-                <div className="logo-name">
-                    <div className="logo">
-                        <img src="/images/logo.svg" alt="logo" />
-                    </div>
-                    <div className="divider">
-
-                    </div>
-                    <div className="name">
-                        <p>E-learning <br/>Platform</p>
-                    </div>
-                </div>
-                <div className="subscribe">
-                    <h2>Subscribe To Get Our Newsletter</h2>
-                    <div className="form">
-                    <input type="email" placeholder="Your Email" />
-                    <button type="submit">Subscribe</button>
-                    </div>
-                    
-                </div>
-
-                <div className="links">
-                    <ul>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                    <p>&copy; {new Date().getFullYear()} Class CSR Ltd</p>
-                </div>
-            </div>
-        </div>
-        
-        </>
-    )
+function Footer() {
+  return (
+    <footer className="footer">
+      <p>Subscribe to get our Newsletter</p>
+      <form>
+        <input type="email" placeholder="Your Email" />
+        <button type="submit" className="footer-btn">Subscribe</button>
+      </form>
+      <nav>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </nav>
+      <p>&copy; {new Date().getFullYear()} class CSR Ltd</p>
+    </footer>
+  );
 }
 
 export default Footer;
