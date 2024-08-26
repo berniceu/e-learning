@@ -6,7 +6,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import LiveCourse from './components/LiveCourse';
 import LiveDetails from './components/LiveDetails'
-import CourseListWithPagination from './Components/CourseListWithPagination';
+import CourseListWithPagination from '../src/components/CourseListWithPagination';
 
 function App() {
   return (

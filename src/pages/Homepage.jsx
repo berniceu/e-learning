@@ -1,10 +1,10 @@
 import React from "react";
-import Header from '../Components/header';
-import Footer from "../Components/footer";
+import Header from '../components/header'
+import Footer from '../components/Footer'
 import '../styles/main.css'
 import '../styles/home/home.css'
-import SuccessCard from '../Components/successCard';
-import StudentCount from '../Components/studentCount';
+import SuccessCard from '../components/successCard';
+import StudentCount from '../components/studentCount'
 
 const Homepage = () => {
     return(
