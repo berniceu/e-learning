@@ -58,6 +58,7 @@ const CoursePopup = () => {
 
 
     if (!isPopupOpen) return null;
+
     return (
         <div className="overlay">
             <div className="popup">

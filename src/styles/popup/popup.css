@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
 }
 
 .overlay {
@@ -109,19 +110,6 @@
   gap: 1.5rem;
   width: 100%;
   padding-top: 12px;
-}
-
-/* */
-.bttn {
-  font-weight: 500;
-  line-height: 1.5rem;
-  border: none;
-  padding: 1rem 4rem;
-  border-radius: 5rem;
-  font-size: 1rem;
-  font-family: "Lexend", sans-serif;
-  height: 3.75rem;
-  cursor: pointer;
 }
 
 .cancel-btn {

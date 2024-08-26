@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './pages/Homepage';
 import { AppProvider } from "./context/Context";
+import Admin from './pages/admin/Admin.jsx';
+import CoursesPage from './pages/CoursesPage';
 
 function App() {
   return (
@@ -8,6 +10,11 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/courses" element={<CoursesPage />} />
+
+          <Route path="/admin" element={<Admin />}>
+            {/* <Route path="admin/???" element={< kk />} /> */}
+          </Route>
         </Routes>
       </Router>
     </AppProvider>

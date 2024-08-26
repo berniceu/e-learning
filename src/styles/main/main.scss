@@ -10,7 +10,7 @@ $primary_gap: 1.5rem;
 $sec_gap: 0.75rem;
 
 $button-border-radius: 5rem;
-$button-padding: 1rem 4rem;
+$button-padding: 0.9rem 2rem;
 $button-height: 3.75rem;
 
 
@@ -18,6 +18,7 @@ $button-height: 3.75rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font;
 }
 
 .header {
@@ -33,6 +34,12 @@ $button-height: 3.75rem;
     margin: 0;
     padding: 0;
     gap: $primary_gap;
+    .profilepic{
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid $white;
+    }
     li {
       margin-right: 1.25rem;
       &:last-child {
@@ -69,7 +76,7 @@ $button-height: 3.75rem;
   .nav-components {
     justify-content: flex-end;
     display: flex;
-    gap: $primary_gap;
+    gap: 44px;
     align-items: center;
   }
 }

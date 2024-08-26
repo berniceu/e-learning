@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
+$primary_color: #145c74;
+$primary_grey: #575758;
+$secondary_color: #f8f7f7;
+$sec_grey: #6e6e6e;
+$white: #ffffff;
+$black: #000000;
+$font: "Lexend", sans-serif;
+$primary_gap: 1.5rem;
+$sec_gap: 0.75rem;
+
+$button-border-radius: 5rem;
+$button-padding: 1rem 4rem;
+$button-height: 3.75rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+.users-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.user-group-wrapper {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  
+  .group-content {
+    display: flex;
+    align-items: center;
+
+    .chart-container {
+      flex: 1;
+      max-width: 300px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .user-details {
+      flex: 2;
+      padding-left: 20px;
+      
+      .title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .user-card {
+        background-color: #f1f5f9;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        border: 1px solid #cbd5e0;
+
+        .user-detail {
+          font-size: 0.9rem;
+          color: #4a5568;
+          margin-bottom: 5px;
+        }
+      }
+
+      .no-users {
+        font-size: 0.9rem;
+        color: #a0aec0;
+      }
+    }
+  }
+}
+
+
