@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.div {
+  padding: 64px;
 }
 
 .course-actions {
@@ -46,8 +51,7 @@
 .courses-card .course .img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
 }
 .courses-card .course .course-details {
   padding: 10px;
@@ -96,8 +100,11 @@
   font-size: 16px;
   margin: 0 5px;
   cursor: pointer;
+  color: grey;
 }
 .pagination button.active {
   font-weight: bold;
-  color: #007bff;
-}/*# sourceMappingURL=index.css.map */
+  color: #145c74;
+}
+
+/*# sourceMappingURL=index.css.map */

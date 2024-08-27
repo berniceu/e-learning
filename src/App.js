@@ -12,6 +12,7 @@ import CourseListWithPagination from './Components/CourseListWithPagination';
 import ResetPassword from './Components/ResetPassword.jsx';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import CourseDetailPage from './pages/CourseDetailPage.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/courses" element={<CourseListWithPagination />} />
+          <Route path="/course/:id" element={<CourseDetailPage />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/liveDetails" element={<LiveDetails />} />

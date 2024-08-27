@@ -1,17 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-$primary_color: #145c74;
-$primary_grey: #575758;
-$secondary_color: #f8f7f7;
-$sec_grey: #6e6e6e;
-$white: #ffffff;
-$black: #000000;
-$font: "Lexend", sans-serif;
-$primary_gap: 1.5rem;
-$sec_gap: 0.75rem;
-
-$button-border-radius: 5rem;
-$button-padding: 1rem 4rem;
-$button-height: 3.75rem;
+@import "../variables.scss";
 
 * {
   margin: 0;
@@ -20,295 +7,288 @@ $button-height: 3.75rem;
   font-family: $font;
 }
 
-
-.courses-available {
+.filter_search_container {
+  max-width: 100%;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.5rem 1.875rem;
-  background-color: $white;
   flex-direction: column;
-  .filter_search_container {
-    max-width: 100%;
-    margin: 0;
+  align-items: flex-start;
+  gap: $primary_gap;
+  position: relative;
+  h2 {
+    font-size: 22px;
+    color: $primary_color;
+    font-weight: 400;
+    font-family: $font;
+  }
+  .search-bar-filter {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: $primary_gap;
-    position: relative;
-    h2 {
-      font-size: 22px;
-      color: $primary_color;
-      font-weight: 400;
-      font-family: $font;
-    }
-    .search-bar {
-      display: flex;
-      gap: 10px;
-      input[type="text"] {
-        width: 300px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 25px;
-        font-size: 16px;
-        outline: none;
-      }
-      button {
-        display: flex;
-        align-items: center;
-        background: #fff;
-        border: 1px solid #ccc;
-        padding: 10px 15px;
-        border-radius: 25px;
-        cursor: pointer;
-        font-size: 16px;
-        outline: none;
-        .filter-icon {
-          margin-right: 5px;
-        }
-      }
-    }
-    .filter-popup {
-      position: absolute;
-      display: flex;
-      gap: 20px;
+    gap: 10px;
+    width: 100%;
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
       border: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: $secondary_color;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      .filter-option {
-        display: flex;
-        flex-direction: column;
-        h4 {
-          margin-bottom: 10px;
-          font-size: 16px;
-        }
-        div {
-          cursor: pointer;
-          padding: 5px 0;
-          &.selected {
-            font-weight: bold;
-            color: $primary_color;
-          }
+      border-radius: 25px;
+      font-size: 16px;
+      outline: none;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px 15px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      outline: none;
+      width: 100%;
+      color: $primary_grey;
+      .filter-icon {
+        margin-right: 5px;
+        color: $primary_grey;
+      }
+    }
+  }
+  .filter-popup {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    top: 0;
+    right: 0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: $secondary_color;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    .filter-option {
+      display: flex;
+      flex-direction: column;
+      h4 {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      div {
+        cursor: pointer;
+        padding: 5px 0;
+        &.selected {
+          font-weight: bold;
+          color: $primary_color;
         }
       }
     }
-    .results {
-      font-size: 18px;
-      font-weight: 500;
+  }
+  .results {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    color: $primary_grey;
+    strong {
+      color: $primary-color;
+    }
+  }
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  .img-container {
+    img {
+      border-radius: 12px;
+    }
+  }
+
+  .hrs-level {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: #1e7938;
+    }
+
+    .hours,
+    .level {
       display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
+      align-items: center;
       gap: 10px;
     }
   }
 }
 
-.course-card{
+.courses-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.courses-container {
+  margin-bottom: 4em;
+
+  .courses-title {
     display: flex;
-    flex-direction: column;
-    max-width: 300px;
+    flex-direction: row;
+    align-items: center;
+    margin: 2em 2em;
+    justify-content: space-between;
+    width: 60rem;
 
-    h2{
-        font-size: 24px;
-        margin-bottom: 16px;
-    }
-    .img-container{
-
-        img{
-            border-radius: 12px;
-        }
+    h1 {
+      color: #1e7938;
     }
 
-    .hrs-level{
-        display: flex;
-        justify-content: space-between;
-
-        p{
-            color: #1E7938;
-        }
-
-        .hours, .level{
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-        }
+    .new-course-button {
+      background-color: #579b55b4;
+      color: white;
+      border-radius: 20px;
+      padding: 1em 2em;
+      cursor: pointer;
+      text-decoration: none;
     }
+  }
 }
 
-.courses-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    
-}
+.course-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-inline: 80px;
+  padding-top: 20px;
+  padding-bottom: 30px;
 
-.courses-container{
-    margin-bottom: 4em;
-
-    .courses-title{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin: 2em 2em;
-        justify-content: space-between;
-        width: 60rem;
-
-        h1{
-            color: #1E7938;
-        }
-    
-        .new-course-button{
-            background-color: #579b55b4;
-            color: white;
-            border-radius: 20px;
-            padding: 1em 2em;
-            cursor: pointer;
-            text-decoration: none;
-        }
-    }
-    
-
-}
-
-.course-details-container{
+  .names {
     display: flex;
-    flex-direction: column;
     gap: 20px;
-    padding-inline: 80px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    
+    align-items: center;
+    color: #1e7938;
 
-    .names{
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        color: #1E7938;
+    .img-container {
+      width: 80px;
+      height: 80px;
+      background-color: #1e7938;
+      border-radius: 12px;
 
-        .img-container{
-            width: 80px;
-            height: 80px;
-            background-color: #1E7938;
-                border-radius: 12px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
 
-            img{
-                max-width: 100%;
-                height: auto;
-                
-            }
-
-            .title{
-                color: #1E7938;
-                h3{
-                    font-weight: 300;
-                }
-            }
+      .title {
+        color: #1e7938;
+        h3 {
+          font-weight: 300;
         }
+      }
     }
+  }
 
+  .description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 120px;
 
-    .description{
+    .first-row {
+      max-width: 50%;
+      // gap: 20px;
+
+      .skills-facts-container {
         display: flex;
         flex-wrap: wrap;
-        gap: 120px;
+        justify-content: space-between;
+      }
+      p {
+        max-width: 500px;
+      }
 
-        .first-row{
-            max-width: 50%;
-            // gap: 20px;
+      .facts-item {
+        display: flex;
+        gap: 10px;
+      }
 
-            .skills-facts-container{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
-            p{
-                max-width: 500px;
-            }
+      .skill-assessment-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        margin-top: 8em;
+        background-color: #408a3d7c;
+        border-radius: 20px;
+        // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.671);
 
-            .facts-item{
-                display: flex;
-                gap: 10px;
-            }
-
-            .skill-assessment-card{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 1rem;
-                margin-top: 8em;
-                background-color: #408a3d7c;
-                border-radius: 20px;
-                // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.671);
-
-                h2{
-                    color: #1E7938;
-                }
-
-                .button{
-                    background-color: #1E7938;
-                    color: #FFFFFF;
-                    padding: 10px 20px;
-                    width: 12em;
-                    border-radius: 10px;
-                    cursor: pointer;
-
-                    a{
-                        color: white;
-                        text-decoration: none;
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                    }
-                }
-            }
-            
+        h2 {
+          color: #1e7938;
         }
 
-        .second-row{
-            max-width: 50%;
+        .button {
+          background-color: #1e7938;
+          color: #ffffff;
+          padding: 10px 20px;
+          width: 12em;
+          border-radius: 10px;
+          cursor: pointer;
 
-            .progress-bar {
-                width: 100%;
-                height: 20px; 
-                background-color: #f0f0f0;
-                border-radius: 10px;
-                margin-bottom: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.271);
-            }
-            
-            .progress-bar-inner {
-                height: 100%;
-                width: 70%;
-                background-color: #1E7938; 
-                border-radius: 5px; 
-                transition: width 0.3s ease; 
-            }
-
-            .button{
-                background-color: #1E7938;
-                color: #FFFFFF;
-                padding: 10px 20px;
-                border-radius: 12px;
-                cursor: pointer;
-
-                a{
-                    text-decoration: none;
-                    color: #FFFFFF;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                }
-            }
-
-            .list{
-                .list-item{
-                    display: flex;
-                    gap: 10px;
-                }
-            }
+          a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
         }
+      }
     }
+
+    .second-row {
+      max-width: 50%;
+
+      .progress-bar {
+        width: 100%;
+        height: 20px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.271);
+      }
+
+      .progress-bar-inner {
+        height: 100%;
+        width: 70%;
+        background-color: #1e7938;
+        border-radius: 5px;
+        transition: width 0.3s ease;
+      }
+
+      .button {
+        background-color: #1e7938;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 12px;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+
+      .list {
+        .list-item {
+          display: flex;
+          gap: 10px;
+        }
+      }
+    }
+  }
 }
